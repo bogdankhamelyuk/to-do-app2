@@ -1,0 +1,43 @@
+<!-- mainscreen.component.html -->
+
+<div class="form-group container">
+  <ul class="list-group list-group-flush">
+    <div class="li-horiz-cont" *ngFor="let task of tasks">
+      <button
+        type="button"
+        class="btn btn-success"
+        (click)="markAsDone(task.id - 1)"
+      >
+        Done
+      </button>
+      <li class="list-group-item" [class.list-group-item-success]="task.done">
+        {{ task.text }}
+      </li>
+      <button
+        type="button"
+        class="btn btn-danger"
+        (click)="deleteTask(task.id - 1)"
+      >
+        Delete
+      </button>
+    </div>
+  </ul>
+  <div class="input-container">
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      [(ngModel)]="input"
+      placeholder="Your task"
+      (input)="updateButtonState()"
+    />
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="addTask()"
+      [disabled]="isButtonDisabled"
+    >
+      Add
+    </button>
+  </div>
+</div>
