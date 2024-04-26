@@ -30,6 +30,7 @@
       [(ngModel)]="input"
       placeholder="Your task"
       (input)="updateButtonState()"
+      (keyup.enter)="addTask()"
     />
     <button
       type="button"

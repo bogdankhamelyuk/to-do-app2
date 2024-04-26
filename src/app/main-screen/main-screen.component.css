@@ -37,8 +37,8 @@
 
 /* singular item with only text in it */
 .list-group-item {
-  width: 50%;
-  overflow: auto;
+  width: 50vw;
+  word-wrap: break-word;
 }
 
 /* input container containing input, as well as button */
