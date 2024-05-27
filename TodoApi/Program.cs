@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TodoApi.Models;
+using MySql.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,12 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-// Adds the database context to the DI container.
-builder.Services.AddDbContext<TodoContext>(opt =>
-//Specifies that the database context will use an in-memory database.
-    opt.UseInMemoryDatabase("TodoList"));
+// ASP.NET Core uses Dependency Injection (DI) to manage the lifetime and dependencies of services. 
+// By calling AddDbContext<TaskContext>, you are registering TaskContext with the DI container.
+builder.Services.AddDbContext<TodoContext>(options =>
+    options.UseMySQL(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-    
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

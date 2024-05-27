@@ -252,3 +252,16 @@
 /Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
 /Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Security.Cryptography.ProtectedData.dll
 /Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Windows.Extensions.dll
+/Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+/Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/Google.Protobuf.dll
+/Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/K4os.Compression.LZ4.dll
+/Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/K4os.Compression.LZ4.Streams.dll
+/Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/K4os.Hash.xxHash.dll
+/Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/MySql.Data.dll
+/Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/MySql.EntityFrameworkCore.dll
+/Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/ZstdSharp.dll
+/Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/runtimes/win-x64/native/comerr64.dll
+/Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/runtimes/win-x64/native/gssapi64.dll
+/Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/runtimes/win-x64/native/k5sprt64.dll
+/Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/runtimes/win-x64/native/krb5_64.dll
+/Users/bogdankhamelyuk/Documents/workspace/csharp/to-do-app2/TodoApi/bin/Debug/net8.0/runtimes/win-x64/native/krbcc64.dll
