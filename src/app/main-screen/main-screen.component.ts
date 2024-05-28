@@ -27,7 +27,7 @@ export class MainScreenComponent implements OnInit {
 
   addTask() {
     const newTask = {
-      // id: this.tasks.length + 1, // Remove this line to let the backend generate the ID
+      id: this.tasks.length + 1, // Remove this line to let the backend generate the ID
       name: this.input,
       isComplete: false,
     };
