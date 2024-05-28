@@ -20,13 +20,19 @@ export class TodoService {
   }
 
   postTodoItem(data: any) {
-    console.log('data:: ', data);
-
     return this.http.post<Task>(this.apiUrl, data).pipe(
       catchError((err) => {
-        console.error('Error occurred:', err);
-        return throwError('Error in source. Details: ' + err);
+        console.error('Error in POST occurred:', err);
+        return err;
       })
     );
+  }
+
+  putTodoItem(data: Task) {
+    return this.http.put<Task>(this.apiUrl + `/${data.id}`, data);
+  }
+
+  deleteTodoItem(id: number) {
+    return this.http.delete<Task>(this.apiUrl + `/${id}`);
   }
 }

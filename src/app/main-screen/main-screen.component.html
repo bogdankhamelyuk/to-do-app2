@@ -3,12 +3,8 @@
 <div class="form-group container">
   <ul class="list-group list-group-flush">
     <div class="li-horiz-cont" *ngFor="let task of tasks">
-      <button
-        type="button"
-        class="btn btn-success"
-        (click)="markAsDone(task.id - 1)"
-      >
-        Done
+      <button type="button" class="btn btn-success" (click)="markAsDone(task)">
+        {{ task.isComplete ? "Undo" : "Done" }}
       </button>
       <li
         class="list-group-item"
@@ -19,7 +15,7 @@
       <button
         type="button"
         class="btn btn-danger"
-        (click)="deleteTask(task.id - 1)"
+        (click)="deleteTask(task.id)"
       >
         Delete
       </button>

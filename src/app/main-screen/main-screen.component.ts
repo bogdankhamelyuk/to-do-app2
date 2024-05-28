@@ -27,7 +27,7 @@ export class MainScreenComponent implements OnInit {
 
   addTask() {
     const newTask = {
-      id: this.tasks.length + 1, // Remove this line to let the backend generate the ID
+      // id: this.tasks.length + 1, // Remove this line to let the backend generate the ID
       name: this.input,
       isComplete: false,
     };
@@ -35,7 +35,7 @@ export class MainScreenComponent implements OnInit {
     this.todoService.postTodoItem(newTask).subscribe(
       (response) => {
         console.log('Task created successfully:', response);
-        this.tasks.push(response); // Add the new task to the local array
+        this.tasks.push(response as Task); // Add the new task to the local array
         this.input = ''; // Clear input field after adding task
         this.isButtonDisabled = true; // Assuming there's logic to manage the button state
       },
@@ -48,14 +48,31 @@ export class MainScreenComponent implements OnInit {
   updateButtonState() {
     this.isButtonDisabled = this.input.trim().length === 0;
   }
-  markAsDone(taskId: number) {
-    // console.log(this.tasks);
-    this.tasks[taskId].isComplete = !this.tasks[taskId].isComplete;
+  markAsDone(task: Task) {
+    task.isComplete = !task.isComplete;
+    this.todoService.putTodoItem(task).subscribe(
+      (response: any) => {
+        console.log(`task ${task.id} updated`);
+      },
+      (error: any) => {
+        console.error('error upd task: ', error);
+      }
+    );
     // Implement your logic to mark the task as done
   }
 
   deleteTask(taskId: number) {
     console.log('Task deleted. Task ID:', taskId);
-    // Implement your logic to delete the task
+    this.todoService.deleteTodoItem(taskId).subscribe(
+      (response: any) => {
+        const index = this.tasks.findIndex((task) => task.id === taskId);
+        if (index > -1) {
+          this.tasks.splice(index, 1);
+        }
+      },
+      (error: any) => {
+        console.error('error upd task: ', error);
+      }
+    );
   }
 }

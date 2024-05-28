@@ -69,7 +69,7 @@ namespace TodoApi.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok();
         }
 
         // POST: api/Todo
@@ -90,13 +90,13 @@ namespace TodoApi.Controllers
             var todoItem = await _context.TodoItems.FindAsync(id);
             if (todoItem == null)
             {
-                return NotFound();
+                return Ok();
             }
 
             _context.TodoItems.Remove(todoItem);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok();
         }
 
         private bool TodoItemExists(long id)
