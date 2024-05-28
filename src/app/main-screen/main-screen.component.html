@@ -10,8 +10,11 @@
       >
         Done
       </button>
-      <li class="list-group-item" [class.list-group-item-success]="task.done">
-        {{ task.text }}
+      <li
+        class="list-group-item"
+        [class.list-group-item-success]="task.isComplete"
+      >
+        {{ task.name }}
       </li>
       <button
         type="button"
