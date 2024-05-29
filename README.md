@@ -1,10 +1,14 @@
 # ToDoApp2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
+This is my second ToDo application, which is made using Angular for Frontend and ASP.Net Core + MySql database for Backend. 
 
-## Development server
+## Requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+* Frontend
+  * Angular CLI
+* Backend
+  * [MySql server](https://downloads.mysql.com/archives/community/): Please note, that product version must be compatible with your OS version.
+  * [.NET](https://dotnet.microsoft.com/en-us/download)
 
 ## Code scaffolding
 
