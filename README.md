@@ -271,4 +271,4 @@ It is important to mention, that UI logic must be inside of the `subscribe` meth
 
 ### Further details
 
-To get more details on the frontend code you may check `/src/app/main-screen` folder. There you may see how stylings was applied and so on. 
+To get more details on the frontend code you may check `/src/app/main-screen` folder. There you may see how stylings was applied and many more.
